@@ -1,4 +1,4 @@
-import time
+
 game_worlds= ['Elders Scrolls','Warcraft',
 'Gothic','Grand Theft Auto','Fallout','Diablo','Dishonored']
 print ("Вот ваш список",game_worlds)
