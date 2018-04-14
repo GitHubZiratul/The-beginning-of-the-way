@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel,QMessageB
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QCoreApplication,QSize
 from PyQt5 import QtGui
+# self.name.setFlat(True) 
 
 
 class Example(QWidget):
@@ -25,22 +26,37 @@ class Example(QWidget):
 		
 		
 
-		self.nameText = QLabel('''Ты очухиваещься в темном помещении
-ничего не видно , ты хочешь выбраться отсюда''', self)
-		self.nameText.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
+		
 		
 
-		self.Pocket = QPushButton('Осмотреть карманы', self)
-		self.Pocket.move(100,200) 
-		self.Pocket.setGeometry(300,400,150,30)
+		self.autorisation = QPushButton('', self)
+		self.autorisation.move(100,200) 
+		self.autorisation.setGeometry(210,200,300,65)
+		self.autorisation.setIcon(QIcon('autorisation.png'))
+		self.autorisation.setFlat(True)
+		self.autorisation.setIconSize(QSize(500,700))
+
+
+		self.registation = QPushButton('', self)
+		self.registation.move(100,200) 
+		self.registation.setGeometry(210,300,300,65)
+		self.registation.setIcon(QIcon('registation.png'))
+		self.registation.setFlat(True)
+		self.registation.setIconSize(QSize(450,700))
+
 
 		
 		
-		Quit = QPushButton('Выход', self)
+		Quit = QPushButton('', self)
 		Quit.move(300,775) 
 		Quit.clicked.connect(QCoreApplication.instance().quit)
 		Quit.resize(Quit.sizeHint())
 
+		Quit.move(0,0) 
+		Quit.setGeometry(600,0,100,100)
+		Quit.setIcon(QIcon('power.png'))
+		Quit.setFlat(True)
+		Quit.setIconSize(QSize(100,100))
 		
 		
 		self.show() 
@@ -60,7 +76,3 @@ class Example(QWidget):
 		
 
 
-app = QApplication(sys.argv)
-my_window = Example()
-sys.exit(app.exec_())
-ex = Example()
